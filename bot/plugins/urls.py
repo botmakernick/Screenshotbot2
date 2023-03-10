@@ -8,7 +8,7 @@ from ..screenshotbot import ScreenShotBot
 from ..config import Config
 
 
-@ScreenShotBot.on_message(Filters.private & ((Filters.text & ~Filters.edited) | Filters.media) & Filters.incoming)
+@ScreenShotBot.on_message(Filters.private & ((Filters.text & ~Filters) | Filters.media) & Filters.incoming)
 async def _(c, m):
 
     if m.media:
